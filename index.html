@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        #question { font-size: 24px; }
+        #answer { font-size: 20px; margin: 10px; }
+        button { font-size: 20px; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h1>Math Game</h1>
+    <div id="question"></div>
+    <input type="number" id="answer" placeholder="Your answer" />
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="result"></p>
+
+    <script>
+        let correctAnswer;
+
+        function generateEquation() {
+            const a = Math.floor(Math.random() * 10) + 1;
+            const b = Math.floor(Math.random() * 10) + 1;
+            const operation = ['+', '-', '*', '/'][Math.floor(Math.random() * 4)];
+            if (operation === '/') a *= b; // ensure a / b is an integer
+            const equation = `${a} ${operation} ${b}`;
+            correctAnswer = eval(equation);
+            document.getElementById('question').innerText = `Solve: ${equation}`;
+        }
+
+        function checkAnswer() {
+            const userAnswer = parseFloat(document.getElementById('answer').value);
+            const resultElement = document.getElementById('result');
+            if (userAnswer === correctAnswer) {
+                resultElement.innerText = 'Correct! Well done!';
+            } else {
+                resultElement.innerText = `Incorrect. The correct answer was ${correctAnswer}.`;
+            }
+            generateEquation();
+        }
+
+        window.onload = generateEquation;
+    </script>
+</body>
+</html>
