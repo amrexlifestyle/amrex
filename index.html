@@ -1,46 +1,312 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-    <title>Math Game</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        #question { font-size: 24px; }
-        #answer { font-size: 20px; margin: 10px; }
-        button { font-size: 20px; padding: 10px 20px; }
-    </style>
+	<link href="#" rel="icon">
+  <link href="assets/img/favicon.jpg" rel="apple-touch-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrex Lifestyle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="style.js"></script>
+    
+    <link rel="stylesheet" href="style.css"/>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<style>
+</style>
+
 </head>
 <body>
-    <h1>Math Game</h1>
-    <div id="question"></div>
-    <input type="number" id="answer" placeholder="Your answer" />
-    <button onclick="checkAnswer()">Submit</button>
-    <p id="result"></p>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo">
+                <a href="#" class="hire about-img" style="padding: 20px; border-radius: 10px;">
+                    Amrex <span>Lifestyle®</span>
+                </a>
+                
+                
+            </div>
+                        <ul class="menu about-img" style="padding: 20px; border-radius: 10px;">
+                <li><a href="#home" class="menu-btn hire">Home</a></li>
+                <li><a href="#about" class="menu-btn hire">About</a></li>
+                <li><a href="#services" class="menu-btn hire">Services</a></li>
+                <li><a href="#skills" class="menu-btn hire">Skills</a></li>
+                <li><a href="#teams" class="menu-btn hire">Testimonials</a></li>
+                <li><a href="#contact" class="menu-btn hire">Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
-    <script>
-        let correctAnswer;
+    <!-- home section start -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1"></div>
+                <div class="text-2">Let's Get to Work</div>
+                <div class="text-3">Have something in mind? Let's Make it Happen 👷‍♂️ <span class="typing"></span></div>
 
-        function generateEquation() {
-            const a = Math.floor(Math.random() * 10) + 1;
-            const b = Math.floor(Math.random() * 10) + 1;
-            const operation = ['+', '-', '*', '/'][Math.floor(Math.random() * 4)];
-            if (operation === '/') a *= b; // ensure a / b is an integer
-            const equation = `${a} ${operation} ${b}`;
-            correctAnswer = eval(equation);
-            document.getElementById('question').innerText = `Solve: ${equation}`;
-        }
+		    <br>
+		<div class="row">
+	       
+           <a href="#"><img src="med.png" width="150px" height="100px"></a><span>  </span>
 
-        function checkAnswer() {
-            const userAnswer = parseFloat(document.getElementById('answer').value);
-            const resultElement = document.getElementById('result');
-            if (userAnswer === correctAnswer) {
-                resultElement.innerText = 'Correct! Well done!';
-            } else {
-                resultElement.innerText = `Incorrect. The correct answer was ${correctAnswer}.`;
-            }
-            generateEquation();
-        }
+        </div>
+		    <br>
+                <a href="mailto:amrexlifestyle@gmail.com" class="hire about-img">Drop an Email ✉️</a>
+            </div>
+        </div>
+    </section>
 
-        window.onload = generateEquation;
-    </script>
+   
+    <!-- services section start -->
+    <section class="services" id="services">
+        <div class="max-width">
+            <h2 class="title">What we offer 🎁</h2>
+            <div class="serv-content">
+                <div class="card about-img">
+                    <div class="box">
+                        <img src="ads.png" width="75px" height="70px" style="background: transparent;"></img>
+
+                        <div class="text">Digital Advertising</div>
+                        <p>Our team specializes in creating targeted and effective digital advertising and marketing campaigns that drive results. We use the latest tools and technologies to deliver campaigns that reach your target audience and maximize your ROI.</p>
+                    </div>
+                </div>
+                <div class="card about-img">
+                    <div class="box">
+                        <img src="coding.webp" width="75px" height="70px" style="background: transparent;"></img>
+                        <div class="text">Web Development</div>
+                        <p>At Amrex Lifestyle, we excel in web development, leveraging expertise in HTML, CSS, JavaScript, and Python to craft visually stunning websites and bespoke web applications that seamlessly blend creativity with technical precision.</p>
+                    </div>
+                </div>
+                <div class="card about-img">
+                    <div class="box">
+                        <img src="graphic.webp" width="75px" height="70px" style="background: transparent;"></img>
+                        <div class="text">Graphic Design</div>
+                        <p>At Amrex Lifestyle, we lead in graphic design, utilizing our expertise to deliver captivating visual content that embodies innovation and excellence, covering a range of services including logo design, branding, and creative graphic elements.</p>
+                    </div>
+                </div>
+                <div class="card about-img">
+                    <div class="box">
+                        <img src="social.webp" width="75px" height="70px" style="background: transparent;"></img>
+                        <div class="text">Social Media</div>
+                        <p>We also excel in social media management, leveraging our expertise to curate engaging content, foster brand presence, and drive audience engagement across various platforms, ensuring a dynamic and impactful online presence.</p>
+                    </div>
+               </div>
+               <div class="card about-img">
+                <div class="box">
+                    <img src="content.png" width="75px" height="70px" style="background: transparent;"></img>
+                    <div class="text">Content Creation</div>
+                    <p>At Amrex Lifestyle, we specialize in content creation, harnessing our expertise to craft compelling and impactful content that resonates with audiences, drives engagement, and strengthens brand identity, ensuring a dynamic and influential online presence.</p>
+                </div>
+            </div>
+            <div class="card about-img">
+                <div class="box">
+                    <img src="apps.webp" width="75px" height="70px" style="background: transparent;"></img>
+                    <div class="text">Mobile App Development</div>
+                    <p>Amrex lifestyle demonstrates proficiency in mobile application development through its adept utilization of coding languages, user interface design, and integration of innovative features.</p>
+                </div>
+        </div>
+    </section>
+
+    <!-- skills section start -->
+    <section class="skills" id="skills">
+        <div class="max-width">
+            <h2 class="title">Our Analytical Approach 📊</h2>
+            <div class="skills-content">
+                <div class="column left">
+                    <div class="text">Our Approach and Strategy 🎯</div>
+                    <p>We believe in open communication and transparency. We keep our clients informed throughout the entire process and provide regular progress reports so you can see the impact of our work.
+
+We understand that communication is key to any successful relationship, and we strive to build strong partnerships with our clients. We are dedicated to providing exceptional service and going above and beyond to meet your needs.
+</p>
+                    <a href="#" class="about-img">Read more</a>
+                </div>
+                <div class="column right">
+                    <div class="bars">
+                        <div class="info">
+                            <span>Web Development</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="line html"></div>
+			<div class="bars">
+                        <div class="info">
+                            <span>Digital Advertising</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="line css"></div>
+		        <div class="bars">
+                        <div class="info">
+                            <span>Graphic Design</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line py"></div>
+			<div class="bars">
+                        <div class="info">
+                            <span>Social Media Management</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="line opensource"></div>
+		        <div class="bars">
+                        <div class="info">
+                            <span>Content Creation</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="line html"></div>
+			<div class="bars">
+                        <div class="info">
+                            <span>Mobile App Development</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="line html"></div>
+			<div class="bars">
+                        <div class="info">
+                            <span>Artificial Intelligence</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="line adpi"></div>
+			<div class="bars">
+                        <div class="info">
+                            <span>Internet of Things (IoT)</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="line cc"></div>
+			<div class="bars">
+                        <div class="info">
+                            <span>Software Management</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="line ai"></div>
+			<div class="bars">
+                        <div class="info">
+                            <span>Collaboration</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line bld"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- about section start -->
+ <section class="about" id="about">
+    <div class="max-width">
+        <h2 class="title">About Amrex</h2>
+        <div class="about-content">
+            <div class="column left">
+                <img src="amrex.jpeg" alt="" class="about-img" style="border-radius: 10px;"><style>
+                            
+              </style>
+            </div>
+            <div class="column right about-img" style="padding: 20px; border-radius: 10px;">
+                <div class="text">Know more... 🤝 <span class="typing-2"></span></div>
+                <p>At <b>Amrex Lifestyle</b>
+                    <img src="verif.png" alt="Verification Badge" style="height: 0.8em; vertical-align: middle;" />
+                                          
+, we embody a dynamic fusion of creativity and technical expertise, delivering innovative solutions across a spectrum of IT-related disciplines. As masters of web design and development, we craft digital experiences that seamlessly marry aesthetics with functionality, ensuring that every website we create captivates and engages its audience. Our prowess extends beyond the virtual realm into software development, where we engineer tailored solutions that optimize business processes and propel organizational growth.
+
+                    With a keen eye for design, we specialize in graphic design, breathing life into brands through visually compelling imagery that resonates with audiences and leaves a lasting impression✔️. From captivating logos that embody the essence of a brand to sleek, intuitive user interfaces, our design prowess knows no bounds. At Amrex Lifestyle, we are not merely service providers; we are partners in your journey towards digital excellence, committed to turning your vision into reality with unmatched precision and creativity.
+
+</p>
+                <a href="#" class="about-img">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- teams section start -->
+    <!-- contact section start -->
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contact me 📲</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Get in Touch</div>
+                    <p></p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">My Name is</div>
+                                <div class="sub-title">Amrex Lifestyle</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">You can find me at</div>
+                                <div class="sub-title">Nairobi, Kenya</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">My Email is</div>
+                                <div class="sub-title" id="email" style="cursor: pointer; color: #03A9F4;" onclick="revealEmail()">Click to reveal 🙈</div>
+                            </div>
+                        </div>
+                        
+                        <script>
+                        function revealEmail() {
+                            document.getElementById('email').textContent = 'amrexlifestyle@gmail.com';
+                        }
+                        </script>
+                        
+                    </div>
+                    <div class="row">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info" style="color: green;">
+                            <div class="head">Prefer WhatsApp? <img src="sup.png" alt="WhatsApp Icon" style="vertical-align: middle; height: 20px;"></div>
+                            <div class="sub-title" style="color: green;">
+                                <a href="https://wa.link/7tm6g4" style="color: inherit; text-decoration: none;">Click to chat</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="column right">
+                    <div class="text">Message me 💬</div>
+                    <form action="https://formspree.io/f/mgegzqkk" method="POST">
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" placeholder="Name" name="Name" required>
+                            </div>
+                            <div class="field email">
+                                <input type="email" placeholder="Email" name="email_id" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" placeholder="Subject" name="subject" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea cols="50" rows="20" placeholder="Say something..." name="message" required></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit">Send message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section start -->
+    <footer>
+        <span>Developed By <a href="https://wa.link/7tm6g4">Amrex Lifestyle</a> | <span class="far fa-copyright"></span> 2024 <a href="#">Privacy Policy</a></span>
+    </footer>
+				
+				<!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/akipkirui42', text: 'Schedule a business meeting', color: '#03a9f4', textColor: '#ffffff',}); }</script>
+<!-- Calendly badge widget end -->
+
+    <script src="style.js"></script>
+    
 </body>
 </html>
